@@ -140,6 +140,7 @@ jobs:
   - task: Kubernetes@1
     displayName: 'kubectl apply'
     inputs:
+      connectionType: 'Azure Resource Manager'
       azureSubscriptionEndpoint: '$(Azure.ServiceConnectionId)'
       azureResourceGroup: '$(Azure.ResourceGroupName)'
       kubernetesCluster: '$(AKS.ClusterName)'
